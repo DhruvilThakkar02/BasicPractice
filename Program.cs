@@ -34,6 +34,35 @@ namespace BasicUnderstadng
             Console.WriteLine("This is a colored text");
             Console.Title= "My Console Application";
             Console.WriteLine($"The Console Title is :{Console.Title}");
+
+
+            Console.WriteLine("\n please enter Student Name");
+            string StudentName = Console.ReadLine();
+            Console.WriteLine("please Enter Student Address");
+            string Address = Console.ReadLine();
+            Console.WriteLine("please Enter Student Age");
+            int Age =Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("please Enter your Grade");
+            char Gender = Convert.ToChar(Console.ReadLine());
+
+            Console.WriteLine($"Student Name is :{StudentName}");
+            Console.WriteLine($"Student Address{Address}");
+            Console.WriteLine($"Age:{Age}");
+            Console.WriteLine($"Grade:{Gender}");
+
+
+            Console.WriteLine("please Enter Name");
+            string MyName = Console.ReadLine();
+
+            for (int i=0; i < MyName.Length; i++)
+            {
+                Console.WriteLine("\n", MyName[i]);
+            }
+            string FullName="Dhruvil";
+
+            var nums = FullName.Length*sizeof(char);
+            Console.WriteLine($"the size of the Name={FullName} ,{nums})");
+
         }
     }
 }
