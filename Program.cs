@@ -1,5 +1,5 @@
 ﻿using System.Reflection.Metadata.Ecma335;
-
+using System.Collections.Generic;
 namespace BasicUnderstadng
 {
     public class Program
@@ -14,7 +14,7 @@ namespace BasicUnderstadng
             Console.Write("please Enter a Numbers: ");
             int Nummber = Convert.ToInt32(Console.ReadLine());
             int Nummber1 = Convert.ToInt32(Console.ReadLine());
-         
+
             int Sum = Nummber + Nummber1;
             Console.WriteLine($"The Sum is:{Sum} ");
             string FirstName = "John";
@@ -22,7 +22,7 @@ namespace BasicUnderstadng
 
 
             Console.WriteLine("please Enter a Key");
-            int v1 =Console.Read();
+            int v1 = Console.Read();
             Console.WriteLine($"The Key is :{v1}");
 
             Console.WriteLine("please Anothwe Enter a Key");
@@ -32,7 +32,7 @@ namespace BasicUnderstadng
             Console.ForegroundColor = ConsoleColor.Black;
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.WriteLine("This is a colored text");
-            Console.Title= "My Console Application";
+            Console.Title = "My Console Application";
             Console.WriteLine($"The Console Title is :{Console.Title}");
 
 
@@ -41,7 +41,7 @@ namespace BasicUnderstadng
             Console.WriteLine("please Enter Student Address");
             string Address = Console.ReadLine();
             Console.WriteLine("please Enter Student Age");
-            int Age =Convert.ToInt32(Console.ReadLine());
+            int Age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("please Enter your Grade");
             char Gender = Convert.ToChar(Console.ReadLine());
 
@@ -54,15 +54,23 @@ namespace BasicUnderstadng
             Console.WriteLine("please Enter Name");
             string MyName = Console.ReadLine();
 
-            for (int i=0; i < MyName.Length; i++)
+            for (int i = 0; i < MyName.Length; i++)
             {
                 Console.WriteLine("\n", MyName[i]);
             }
-            string FullName="Dhruvil";
+            string FullName = "Dhruvil";
 
-            var nums = FullName.Length*sizeof(char);
+            var nums = FullName.Length * sizeof(char);
             Console.WriteLine($"the size of the Name={FullName} ,{nums})");
 
+
+            Console.WriteLine("using IEnumerble");
+
+            IEnumerable<int> numbers = new List<int>() { 97, 56, 78, 45, 78, 45, 46, 46, 18, 46 };
+            foreach (var number in numbers)
+            {
+                Console.WriteLine($"Number: {number}");
+            }
         }
     }
 }
